@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { VerticalCard } from '../../components/_index';
+import { useSearch } from '../../context/searchContext';
 import './ProductListing.css';
 
 export const ProductListing = () => {
   const [products, setProducts] = useState([]);
-  const card = { title: 'temp', category: 'temp', img: 'img', price: 'price' };
+  const { searchQuery } = useSearch();
+  const filteredList = products.filter((item) =>
+    item.title.includes(searchQuery)
+  );
+
   useEffect(() => {
     (async () => {
       try {
@@ -18,9 +23,9 @@ export const ProductListing = () => {
   }, []);
   return (
     <div className="product__grid">
-      {products.map((card) => (
-        <VerticalCard card={card} />
-      ))}
+      {filteredList.length
+        ? filteredList.map((card) => <VerticalCard card={card} />)
+        : `${searchQuery} does not exist`}
     </div>
   );
 };

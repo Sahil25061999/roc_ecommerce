@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Rating.css';
 
 export const Rating = ({ rating }) => {
-  const ratingBackground = useRef([]);
-
   const getStyle = (idx) => {
     if (idx < Math.floor(rating)) {
       return { background: 'black' };

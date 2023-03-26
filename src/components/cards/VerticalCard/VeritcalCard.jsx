@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../../context/cartContext';
 import './VerticalCard.css';
 
-export const VerticalCard = ({ card }) => {
+export const VerticalCard = ({ card, quantity = false }) => {
+  const { dispatchCart } = useCart();
   return (
     <div className="card__vertical">
       <div className="card__img__container">
@@ -15,6 +17,17 @@ export const VerticalCard = ({ card }) => {
         <p className="card__category">{card.category}</p>
       </div>
       <div className="card__price">${card.price}</div>
+      {quantity ? (
+        <div className="remove__btn__container">
+          <button
+            onClick={() => dispatchCart({ type: 'REMOVE', payload: card })}
+          >
+            Remove
+          </button>
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   );
 };

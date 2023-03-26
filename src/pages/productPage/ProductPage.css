@@ -16,6 +16,33 @@
 .product__information {
   flex: 1;
 }
+.product__information > * {
+  margin-block: 1rem;
+}
+
+.product__price {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.quantity__btn__container {
+  display: flex;
+  margin-inline: 1rem;
+}
+
+.product__btn__container button,
+.quantity {
+  margin-block: 1.5rem;
+  padding: 1.5rem;
+  background-color: black;
+  color: white;
+}
+
+.quantity {
+  background-color: white;
+  color: black;
+  margin-inline: 1rem;
+}
 
 @media screen and (max-width: 40em) {
   .product__page {

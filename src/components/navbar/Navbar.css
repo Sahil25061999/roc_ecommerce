@@ -7,10 +7,14 @@ nav {
 
 .search__input__container {
   display: flex;
+  width: min(50vw, 40rem);
+  margin-inline: auto;
 }
 
 .search__input__container input {
   border: 1px solid black;
+  padding-inline: 1rem;
+  width: 100%;
 }
 
 .search__btn {

@@ -19,3 +19,9 @@
   font-weight: bold;
   font-size: 2rem;
 }
+
+.remove__btn__container button {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+}
