@@ -1,0 +1,24 @@
+.product__page {
+  margin-block: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.product__page__image {
+  height: 70vh;
+  flex: 1;
+}
+
+.product__page__image img {
+  object-fit: contain;
+}
+
+.product__information {
+  flex: 1;
+}
+
+@media screen and (max-width: 40em) {
+  .product__page {
+    flex-direction: column;
+  }
+}

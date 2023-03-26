@@ -1,0 +1,21 @@
+.card__img__container {
+  max-width: min(50vh, 20rem);
+}
+
+.card__head__container {
+  margin-block: 1rem;
+}
+
+.card__head__container h2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card__category {
+  color: gray;
+}
+
+.card__price {
+  font-weight: bold;
+  font-size: 2rem;
+}

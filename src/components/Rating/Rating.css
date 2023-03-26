@@ -1,0 +1,17 @@
+.ratings__container {
+  display: flex;
+  width: min-content;
+}
+
+.rating__bg {
+  background: rgb(187, 187, 187);
+  background-clip: text;
+  -webkit-background-clip: text !important;
+  margin-right: 2px;
+}
+
+.rating__bg span {
+  font-size: 13px;
+
+  color: transparent;
+}
